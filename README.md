@@ -104,8 +104,18 @@ The server will start at: `http://localhost:8000`.
 - `min_score` *(optional, float)*: Minimum match score threshold (0.0 to 100.0).
 
 **Example: Find top candidates for Job 1 ("Backend Detective")**
-```bash
-curl -X GET "http://localhost:8000/jobs/1/matches?limit=3"
+
+> **Note for Windows PowerShell**: Use `curl.exe` instead of `curl` (in PowerShell, `curl` is an alias for `Invoke-WebRequest`).
+
+```powershell
+# In PowerShell:
+curl.exe "http://127.0.0.1:8000/jobs/1/matches?limit=3"
+
+# Or native PowerShell:
+(Invoke-RestMethod "http://127.0.0.1:8000/jobs/1/matches?limit=3").matches
+
+# In Bash / macOS / Linux:
+curl "http://127.0.0.1:8000/jobs/1/matches?limit=3"
 ```
 **Sample Response**:
 ```json
@@ -166,8 +176,12 @@ curl -X GET "http://localhost:8000/jobs/1/matches?limit=3"
 - `min_score` *(optional, float)*: Minimum match score threshold (0.0 to 100.0).
 
 **Example: Find best matching jobs for Candidate 1 ("Sherlock H.")**
-```bash
-curl -X GET "http://localhost:8000/candidates/1/matches?limit=3"
+```powershell
+# PowerShell:
+curl.exe "http://127.0.0.1:8000/candidates/1/matches?limit=3"
+
+# Bash / Linux / macOS:
+curl "http://127.0.0.1:8000/candidates/1/matches?limit=3"
 ```
 **Sample Response**:
 ```json
@@ -343,3 +357,4 @@ In the spirit of complete transparency as requested in the assignment:
   - Reviewing the SQL Detective dirty data edge cases (such as duplicate applicant emails with varying case sensitivity).
 - **Human Guidance & Review**:
   - The design of the 4-tier scoring algorithm, skill-gating penalty logic, weight distribution, and architecture decisions were designed, reviewed, and tuned to reflect real-world recruitment considerations.
+
