@@ -69,3 +69,4 @@ def execute_raw(sql: str, params: Tuple[Any, ...] = (), db_path: Optional[str] =
         return cur.lastrowid
     finally:
         conn.close()
+

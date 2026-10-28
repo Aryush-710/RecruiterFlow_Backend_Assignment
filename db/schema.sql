@@ -83,3 +83,4 @@ CREATE INDEX idx_candidate_skills ON candidate_skills(skill);
 CREATE INDEX idx_job_required_skills ON job_required_skills(skill);
 CREATE INDEX idx_matches_job_score ON matches(job_id, score DESC);
 CREATE INDEX idx_matches_candidate_score ON matches(candidate_id, score DESC);
+

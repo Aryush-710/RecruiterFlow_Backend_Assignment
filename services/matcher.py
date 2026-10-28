@@ -390,3 +390,4 @@ def get_ranked_jobs_for_candidate(candidate_id: int, limit: Optional[int] = None
         m.pop("_matched_skills_count", None)
 
     return matches[:limit] if limit else matches
+

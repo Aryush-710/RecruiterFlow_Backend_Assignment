@@ -132,3 +132,4 @@ INSERT INTO candidate_traits (candidate_id, trait) VALUES
 (14, 'demanding'), (14, 'decisive'),
 -- Dwight S.
 (15, 'intense'), (15, 'loyal');
+

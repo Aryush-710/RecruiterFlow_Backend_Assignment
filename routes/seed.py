@@ -20,3 +20,4 @@ def seed_database():
         "candidates_count": cands_count,
         "jobs_count": jobs_count
     }
+
